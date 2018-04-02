@@ -36,10 +36,12 @@ buildscript {
     classpath deps.androidPlugin
     classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
     classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.13'
+    classpath 'com.uber:okbuck:0.34.1'
   }
 }
 
 apply plugin: 'com.github.ben-manes.versions'
+apply plugin: 'com.uber.okbuck'
 
 subprojects {
   repositories {
@@ -81,4 +83,11 @@ subprojects {
   dependencies {
     errorprone deps.errorProne
   }
+
+  okbuck {
+    lint {
+      disabled = true
+    }
+  }
+
 }

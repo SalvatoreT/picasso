@@ -36,3 +36,9 @@ jniLibs
 build
 local.properties
 reports
+
+# Buck
+.okbuck/
+.watchmanconfig
+*/BUCK
+
